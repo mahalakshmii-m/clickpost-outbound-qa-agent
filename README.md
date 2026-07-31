@@ -163,11 +163,8 @@ Enter your **Google Gemini API Key** in the sidebar.
 - Model comparison (Gemini vs GPT vs Claude)
 
 ---
+⚡ Powered by
 
-## 👨‍💻 Built By
+Gemini AI • Python • Streamlit • Pydantic • Pandas • Git • GitHub
 
-**Maha**
-
-Powered by
-
-**Gemini AI • Python • Streamlit • Pydantic • Pandas**
+👨‍💻 Developed by Maha
