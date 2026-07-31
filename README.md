@@ -1,100 +1,173 @@
-# ClickPost Outbound QA Agent
+# 🚀 AI Sales Intelligence Platform
 
-A production-oriented AI agent that evaluates account-level SDR outreach
-against ClickPost-style outbound rules and generates an improved version.
+An AI-powered outbound sales quality assurance platform that evaluates SDR outreach using Google Gemini, deterministic business rules, and explainable AI scoring.
 
-## Why this project fits the role
+Originally developed as a technical assessment inspired by ClickPost's outbound QA workflow, the platform is designed to evaluate account-based sales outreach while preventing unsupported claims and providing actionable feedback.
 
-The internship description explicitly mentions an **Outbound QA Agent** that
-checks for:
+---
 
-- no generic opener
-- quantified value in the buyer's context
-- one clear next step
+## 🌐 Live Demo
 
-This implementation adds explainable scoring, structured outputs, strict
-anti-hallucination rules, and a usable Streamlit interface.
+https://sales-outreach-analyzer.streamlit.app
 
-## Features
+---
 
-- Scores eight outbound-quality criteria
-- Produces a 0–100 overall score
-- Gives a send / revise / reject verdict
-- Explains every score with evidence
-- Rewrites the message in fewer than 120 words
-- Never invents unsupported account facts
-- Exports the result as JSON
+## ✨ Features
 
-## Run locally
+- Evaluate outbound sales messages across **8 quality criteria**
+- Generate an overall **0–100 quality score**
+- Hybrid evaluation using **Gemini AI + deterministic business rules**
+- Explainable scoring for every criterion
+- Business impact assessment
+- Hallucination-safe evaluation
+- AI-generated message improvements
+- Structured JSON output
+- Interactive Streamlit interface
+- Multiple demo scenarios
+
+---
+
+## 🛠 Tech Stack
+
+### AI & LLM
+
+- Google Gemini AI
+- Generative AI (GenAI)
+- Prompt Engineering
+
+### Backend
+
+- Python
+
+### Framework
+
+- Streamlit
+
+### Validation & Data
+
+- Pydantic
+- Pandas
+
+### Rule Engine
+
+- Hybrid Rule Engine
+- Deterministic Validation
+
+### Explainable AI
+
+- Explainable AI (XAI)
+- Structured AI Outputs
+- Hallucination Guardrails
+- AI-assisted Quality Scoring
+
+### Deployment
+
+- Git
+- GitHub
+- Streamlit Community Cloud
+
+---
+
+## 🏗 Architecture
+
+```
+                    User Input
+                         │
+                         ▼
+                Streamlit Interface
+                         │
+                         ▼
+              Hybrid Evaluation Engine
+                 ┌───────────────────┐
+                 │                   │
+                 ▼                   ▼
+      Deterministic Rules      Gemini AI
+                 │                   │
+                 └─────────┬─────────┘
+                           ▼
+              Pydantic Structured Output
+                           ▼
+        Explainable Scores • Verdict • Rewrite
+```
+
+---
+
+## ▶ Running Locally
+
+Clone the repository
+
+```bash
+git clone <repository-url>
+cd clickpost-outbound-qa-agent
+```
+
+Create a virtual environment
 
 ```bash
 python -m venv .venv
 ```
 
-Windows:
+Windows
 
 ```bash
 .venv\Scripts\activate
 ```
 
-macOS/Linux:
+macOS/Linux
 
 ```bash
 source .venv/bin/activate
 ```
 
-Install and run:
+Install dependencies
 
 ```bash
 pip install -r requirements.txt
+```
+
+Run the application
+
+```bash
 streamlit run app.py
 ```
 
-Enter your OpenAI API key in the sidebar.
+Enter your **Google Gemini API Key** in the sidebar.
 
-## Suggested demo flow
+---
 
-1. Paste a generic outbound message.
-2. Add a verified account signal such as international expansion or logistics hiring.
-3. Run the QA agent.
-4. Show the score breakdown.
-5. Compare the original with the rewritten outreach.
-6. Download the structured JSON result.
+## 📋 Suggested Demo
 
-## Architecture
+1. Select a demo scenario or enter your own inputs.
+2. Provide verified account context.
+3. Paste an SDR outreach message.
+4. Analyze the outreach.
+5. Review:
+   - Overall quality score
+   - AI score breakdown
+   - Rule validation
+   - Business impact assessment
+   - AI-generated improvements
+6. Download the structured JSON report.
 
-```text
-User input
-   ↓
-Streamlit interface
-   ↓
-Outbound quality system prompt
-   ↓
-OpenAI Responses API + Pydantic structured output
-   ↓
-Scored criteria + verdict + rewritten message
-```
+---
 
-## Evaluation ideas
+## 🚀 Future Enhancements
 
-Create 10–20 test messages across three buckets:
+- PDF report export
+- Radar chart visualization
+- Batch CSV evaluation
+- CRM integration
+- Evaluation history
+- FastAPI backend
+- Authentication & user accounts
+- Model comparison (Gemini vs GPT vs Claude)
 
-- generic / poor
-- moderately personalized
-- strong account-level outreach
+---
 
-Track:
+## 👨‍💻 Built By
 
-- agreement with a human reviewer
-- score consistency across repeated runs
-- percentage of rewrites that satisfy all hard rules
-- average score improvement after rewrite
+**Maha**
 
-## Next production improvements
+Powered by
 
-- Store evaluation history in SQLite/Postgres
-- Add batch CSV upload
-- Add CRM integration
-- Add prompt/version tracking
-- Add human feedback and regression tests
-- Add an API endpoint using FastAPI
+**Gemini AI • Python • Streamlit • Pydantic • Pandas**
