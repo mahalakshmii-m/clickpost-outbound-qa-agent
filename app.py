@@ -16,7 +16,7 @@ from pydantic import BaseModel, Field
 # ---------------------------------------------------------
 
 st.set_page_config(
-    page_title="ClickPost Outbound QA Agent",
+    page_title="Outbound Sales QA Agent",
     page_icon="📦",
     layout="wide",
     initial_sidebar_state="expanded",
@@ -718,9 +718,9 @@ with st.sidebar:
 # ---------------------------------------------------------
 
 st.markdown("""
-# 🚀 ClickPost Sales Intelligence Platform
+# 🚀 Outbound Sales QA Agent
 
-### AI-powered outbound quality assurance for enterprise SDR teams
+### Evaluate, improve, and validate outbound sales messages using Generative AI
 
 """)
 
