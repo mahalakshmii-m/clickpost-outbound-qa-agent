@@ -97,8 +97,8 @@ https://sales-outreach-analyzer.streamlit.app
 Clone the repository
 
 ```bash
-git clone <repository-url>
-cd clickpost-outbound-qa-agent
+git clone https://github.com/mahalakshmii-m/outbound-sales-qa-agent.git
+cd outbound-sales-qa-agent
 ```
 
 Create a virtual environment
