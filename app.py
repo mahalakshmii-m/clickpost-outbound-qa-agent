@@ -198,12 +198,9 @@ CRITERIA_NAMES = [
 
 
 SYSTEM_PROMPT = """
-You are a senior outbound quality-assurance agent for ClickPost.
+You are a senior outbound sales quality-assurance agent.
 
-ClickPost is a post-purchase experience and shipping intelligence platform
-for enterprise and mid-market e-commerce brands.
-
-Your role is to evaluate SDR outreach like a strict, revenue-focused
+Your role is to evaluate SDR outreach messages like a strict, revenue-focused
 sales leader.
 
 Evaluate exactly these eight criteria, each from 0 to 10:
@@ -269,9 +266,9 @@ DEMO_SCENARIOS = {
             "after its international expansion."
         ),
         "draft": (
-            "Hi, I hope you are doing well. ClickPost provides the best "
-            "shipping solution for e-commerce companies. We help brands "
-            "improve logistics. Can we schedule a call to discuss?"
+            "Hi, I hope you are doing well. Our platform provides a solution "
+            "for e-commerce companies to improve shipping visibility and customer "
+            "communication. Can we schedule a call to discuss?"
         ),
     },
     "Average outreach": {
@@ -287,7 +284,7 @@ DEMO_SCENARIOS = {
         "draft": (
             "Hi, I noticed your expansion into three new cities. "
             "Scaling order volume can make delivery visibility harder "
-            "for operations teams. ClickPost helps e-commerce brands "
+            "for operations teams. Our platform helps e-commerce brands "
             "manage shipment tracking and customer communication. "
             "Would you be open to a short call next week?"
         ),
@@ -307,13 +304,12 @@ DEMO_SCENARIOS = {
             "in two metro cities and added new support guidance for delivery "
             "status questions. That usually increases pressure on customer "
             "experience teams when shipment updates are fragmented. "
-            "ClickPost helps centralize post-purchase tracking and proactive "
+            "Our platform helps centralize post-purchase tracking and proactive "
             "customer communication. Would a 15-minute discussion on how "
             "your team is handling same-day delivery visibility be useful?"
         ),
     },
 }
-
 
 # ---------------------------------------------------------
 # DETERMINISTIC RULE ENGINE
@@ -364,7 +360,7 @@ def run_rule_checks(draft_message: str) -> List[dict]:
 
     first_person_count = len(
         re.findall(
-            r"\b(i|we|our|us|clickpost)\b",
+            r"\b(i|we|our|us|our company)\b",
             lower_text,
         )
     )
@@ -536,7 +532,7 @@ def create_download_report(
     report = {
         "report_metadata": {
             "generated_at_utc": datetime.utcnow().isoformat() + "Z",
-            "application": "ClickPost Outbound QA Agent",
+            "application": "AI-Powered Outbound Sales QA Agent",
             "model": model,
         },
         "input": {
@@ -1031,7 +1027,7 @@ if submitted:
             st.download_button(
                 "📥 Download complete QA report (JSON)",
                 data=downloadable_report,
-                file_name="clickpost_outbound_qa_report.json",
+                file_name="outbound_sales_qa_report.json", 
                 mime="application/json",
                 use_container_width=True,
             )
