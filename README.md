@@ -1,8 +1,8 @@
-# 🚀 AI Sales Intelligence Platform
+# 🚀 AI-Powered Outbound Sales QA Agent
 
-An AI-powered outbound sales quality assurance platform that evaluates SDR outreach using Google Gemini, deterministic business rules, and explainable AI scoring.
+An AI-powered outbound sales quality assurance agent that evaluates SDR outreach messages using Google Gemini, deterministic business rules, and explainable AI scoring before they are sent to prospective customers.
 
-Originally developed as a technical assessment inspired by ClickPost's outbound QA workflow, the platform is designed to evaluate account-based sales outreach while preventing unsupported claims and providing actionable feedback.
+The application analyzes message quality across eight sales criteria, performs automated rule-based validations, generates evidence-backed AI feedback, rewrites the outreach for improved effectiveness, and produces a structured quality report to help sales teams send more personalized, accurate, and high-converting outbound messages.
 
 ---
 
