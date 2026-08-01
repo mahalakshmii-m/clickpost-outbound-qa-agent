@@ -8,7 +8,7 @@ The application analyzes message quality across eight sales criteria, performs a
 
 ## 🌐 Live Demo
 
-https://sales-outreach-analyzer.streamlit.app
+https://outbound-sales-messages-analyzer.streamlit.app
 
 ---
 
