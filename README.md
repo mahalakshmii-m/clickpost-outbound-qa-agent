@@ -70,24 +70,38 @@ https://outbound-sales-messages-analyzer.streamlit.app
 
 ## 🏗 Architecture
 
-```
-                    User Input
-                         │
-                         ▼
-                Streamlit Interface
-                         │
-                         ▼
-              Hybrid Evaluation Engine
-                 ┌───────────────────┐
-                 │                   │
-                 ▼                   ▼
-      Deterministic Rules      Gemini AI
-                 │                   │
-                 └─────────┬─────────┘
-                           ▼
-              Pydantic Structured Output
-                           ▼
-        Explainable Scores • Verdict • Rewrite
+
+                         User Input
+                              │
+                              ▼
+                    Streamlit Web Interface
+                              │
+                              ▼
+                   Hybrid Evaluation Engine
+                    ┌─────────────┴─────────────┐
+                    │                           │
+                    ▼                           ▼
+        Deterministic Rule Checks      Gemini AI Analysis
+                    │                           │
+                    └─────────────┬─────────────┘
+                                  │
+                                  ▼
+                   Merge Evaluation Results
+                                  │
+                                  ▼
+                Pydantic Validation & Parsing
+                                  │
+                                  ▼
+                       Structured Output
+                                  │
+                                  ▼
+      ┌──────────────────────────────────────────────────────┐
+      │ • Quality Score                                      │
+      │ • Criteria-wise Feedback                             │
+      │ • Verdict                                            │
+      │ • Improved Rewrite                                   │
+      │ • JSON Export                                        │
+      └──────────────────────────────────────────────────────┘
 ```
 
 ---
